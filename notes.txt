@@ -1,0 +1,19 @@
+keytool -genkey -alias tomcat -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore mykey3.p12 -validity 4000
+
+keytool -exportcert -keystore mykey3.p12 -storepass changeit -alias tomcat -rfc -file mykey3.crt.pem
+
+openssl pkcs12 -in mykey3.p12 -password pass:changeit -nodes -nocerts -out mykey3.key.pem
+
+
+Antonio Brown PIT WR
+Adrian Peterson WAS RB
+Odell Beckham Jr. NYG WR
+Jaguars DEF
+
+Aaron Rodgers QB GB
+A. J. Green Cin WR
+LeSean McCoy BUF RB
+T.Y. Hilton IND WR
+Rams DEF
+
+
